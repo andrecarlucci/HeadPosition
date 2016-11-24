@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeadPosition"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Center your face" Height="480" Width="640">
+    <Grid Background="Black">
+        <Image x:Name="FaceFinder" Width="640" Height="480">
+            <Image.RenderTransform>
+                <SkewTransform AngleX="180" CenterX="0"></SkewTransform>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Assets/placeholder.png" Width="420" VerticalAlignment="Bottom" ></Image>
+        <Image x:Name="ArrowRight" Visibility="Hidden" Source="Assets/arrow.png" Width="50" HorizontalAlignment="Right"></Image>
+        <Image x:Name="ArrowLeft" Visibility="Hidden" Source="Assets/arrow.png" Width="50" HorizontalAlignment="Left">
+            <Image.RenderTransform>
+                <RotateTransform Angle="180" CenterX="25" CenterY="25"></RotateTransform>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ArrowUp" Visibility="Hidden" Source="Assets/arrow.png" Width="50" VerticalAlignment="Top">
+            <Image.RenderTransform>
+                <RotateTransform Angle="270" CenterX="25" CenterY="25"></RotateTransform>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="ArrowDown" Visibility="Hidden" Source="Assets/arrow.png" Width="50" VerticalAlignment="Bottom">
+            <Image.RenderTransform>
+                <RotateTransform Angle="90" CenterX="25" CenterY="25"></RotateTransform>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
